@@ -1,10 +1,16 @@
 <!DOCTYPE html>
+{%load static%}
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Top song</title>
+    <title>{%block titlte%} Top song {% endblock%} </title>
+
+
+      <link rel="stylesheet" type="text/css" href="{%  static 'css/index.css'  %}">
   </head>
   <body>
+
     <h1>Canciones chidas :)</h1>
 
     <p>Las mejores canciones del momento</p>
