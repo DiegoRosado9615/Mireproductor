@@ -1,14 +1,23 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Documentos</title>
-  
+    <link rel="stylesheet" type="text/css" href="{%  static 'css/index.css'  %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'css/player.css'  %}">
   </head>
   <body>
     Este es el home de la practica
+    <div class="img1">
+        <img src= "{% static 'img/mp3.png' %}" alt="" width="20%" height="20%" >
+    </div>
 
-    <div class="rep">
+
+    <div class="posicionRelativa">
+      <br>
+      <br>
+      <br>
         {%include 'music/player.html'%}
     </div>
   </body>

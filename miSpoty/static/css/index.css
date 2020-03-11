@@ -29,10 +29,14 @@
 
 }
 
+.img1{
+  position: relative;
+  left: 40%;
+}
 
 .posicionRelativa{
   width: 100%;
   background: black;
   position: relative;
-  
+
 }
