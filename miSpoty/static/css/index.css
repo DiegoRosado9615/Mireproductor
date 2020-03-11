@@ -1,3 +1,38 @@
-h1{
+
+.titulo{
+  position: relative;
+  left: 30em;
+  width: 15em;
+  height: 7.5em;
   background: blue;
+  text-align: center;
+}
+
+.contenedor{
+    display: grid;
+    grid-row: auto;
+    grid-template-columns	: 1fr 1fr 1fr;
+
+}
+
+.seccionMusica{
+  position:  relative;
+  height: 100%;
+  background-color:  green;
+}
+.imagenMedio{
+  position: relative;
+  left: 20%;
+
+}
+.lateralIzquierdo{
+
+}
+
+
+.posicionRelativa{
+  width: 100%;
+  background: black;
+  position: relative;
+  
 }

@@ -1,0 +1,18 @@
+.reproductor{
+  position: relative;
+  top: 20%;
+  color:white;
+  left: 40%;
+}
+
+.posicionRelativa{
+  width: 100%;
+  background: black;
+  position: relative;  
+}
+
+.ejemplo{
+  position: relative;
+  color :white;
+  left: 40%;
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {%load static%}
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -10,9 +9,31 @@
       <link rel="stylesheet" type="text/css" href="{%  static 'css/index.css'  %}">
   </head>
   <body>
-
-    <h1>Canciones chidas :)</h1>
-
+    <div class="titulo">
+        <h1>Canciones chidas :)</h1>
+    </div>
     <p>Las mejores canciones del momento</p>
+    <div class="contenedor">
+      <div class="seccionMusica">
+        Hola como estassaflñfdmñsfdsf,sdf.fafmmsdfmfsldfm
+       </div>
+      <div class="imagenMedio">
+        <img src="{% static 'img/pikachu.png' %}"  width="50%" height="100%">
+      </div>
+
+      <div class="lateralIzquierdo">
+        que bueno
+      </div>
+
+    </div>
+    <div class="posicionRelativa">
+      <br>
+      <br>
+      <br>
+      <br>
+    {%include 'music/player.html' %}
+    </div>
+
+
   </body>
 </html>
