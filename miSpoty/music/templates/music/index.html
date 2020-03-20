@@ -16,6 +16,11 @@
     <div class="contenedor">
       <div class="seccionMusica">
         Hola como estassaflñfdmñsfdsf,sdf.fafmmsdfmfsldfm
+        <ul class="tabla">
+		        {% for song in songs  %}
+		        	<li>{{song}}  <a href="../../../media/{{song.song_file}}">{{song.song_file}}</a>   </li>	
+		        {% endfor %}
+		    </ul>
        </div>
       <div class="imagenMedio">
         <img src="{% static 'img/pikachu.png' %}"  width="50%" height="100%">
