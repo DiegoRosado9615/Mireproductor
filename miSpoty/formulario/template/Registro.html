@@ -1,0 +1,27 @@
+
+{%load static%}
+
+{% extends 'music/player.html' %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registro</title>
+  </head>
+  {% block body_content %}
+  <body>
+
+    <h1>Entrar</h1>
+
+    <form action="." method="POST">
+      {% csrf_token %}
+        <!--<label for="primer_nombre">Primer Nombre:</label><input name="primer_nombre" type="text">
+        <label for="apellido">apellido:</label><input name="apellido" type="text">
+        <label for="email">Email:</label><input name="email" type="email">
+        <label for="password">Password:</label><input name="password" type="password"> -->
+        {{ form }}
+        <input value="Agregar" type="submit">
+
+    </form>
+  </body>
+  {% endblock body_content %}
+</html>
