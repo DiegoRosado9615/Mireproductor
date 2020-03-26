@@ -1,0 +1,37 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registro</title>
+  </head>
+  {% block body_content %}
+  <body>
+
+    <h1>Entrar</h1>
+
+    {% for field in form %}
+    {% csrf_token %}
+
+    <div class="sing_up_input">
+      <form class="" action="" method="post">
+
+
+        {{ fielf.errors }}
+        {{ field.label_tag }}
+        {{ field }}
+    </div>
+
+    {% endfor %}
+
+<!--
+    <form action="." method="POST">
+        <label for="primer_nombre">Primer Nombre:</label><input name="primer_nombre" type="text">
+        <label for="apellido">apellido:</label><input name="apellido" type="text">
+        <label for="email">Email:</label><input name="email" type="email">
+        <label for="password">Password:</label><input name="password" type="password">
+
+    </form>-->
+    <input value="Sign up" type="submit">
+  </form>
+  </body>
+  {% endblock body_content %}
+</html>

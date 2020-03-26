@@ -8,18 +8,23 @@ from formulario.forms import SingUpForm
 
 # Create your views here.
 class Artista (View):
-    template= "Registro.html"
+    template= "formulario/Registro.html"
     """Nuevo usuario."""
     def get(self, request):
+
         """Render sign up form."""
         form = SingUpForm()
         context = {"form": form}
         return render(request, self.template, context)
 
     def post(self, request):
+        print ("entre")
+        print("Hola")
         """Receive and validate sign up form."""
-        form = SignUpForm(request.POST)
+        form = SingUpForm(request.POST)
+        ##print(from.is_valid())
         if not form.is_valid():
+            print("Entre a este caso")
             context = {"form": form}
             return render(request, self.template, context)
 
@@ -27,8 +32,8 @@ class Artista (View):
         username=form.cleaned_data["email"],
         email=form.cleaned_data["email"],
         password=form.cleaned_data["password"],
-        first_name=form.cleaned_data["first_name"],
-        last_name=form.cleaned_data["last_name"],
+        first_name=form.cleaned_data["primer_nombre"],
+        last_name=form.cleaned_data["apellido"],
         )
-
+        print("Ganamos")
         return HttpResponse("<h1>usuarioCreado!</h1>")
