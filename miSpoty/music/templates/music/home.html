@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% extends 'music/player.html' %}
 
 {%load static%}
 <html lang="en" dir="ltr">
@@ -10,6 +9,20 @@
     <link rel="stylesheet" type="text/css" href="{%  static 'css/player.css'  %}">
   </head>
   <body>
+
+
+
+      <header>
+          {% if user.is_authenticated %}
+          <p>Welcome, {{ user.first_name }}.</p>
+          <a href="{% url 'formulario:logout' %}">Logout</a>
+          {% else %}
+          <a href="{% url 'formulario:login' %}">Login</a> or <a href="{% url 'formulario:registro'%}">Sign Up</a>
+          {% endif %}
+      </header>
+      {% block body_content %}
+      {% endblock body_content %}
+
     Este es el home de la practica
     <div class="img1">
         <img src= "{% static 'img/mp3.png' %}" alt="" width="20%" height="20%" >

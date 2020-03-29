@@ -9,12 +9,9 @@
     <h1>Entrar</h1>
 
     {% for field in form %}
-    {% csrf_token %}
-
     <div class="sing_up_input">
-      <form class="" action="" method="post">
-
-
+      <form class="" action="." method="post">
+        {% csrf_token %}
         {{ fielf.errors }}
         {{ field.label_tag }}
         {{ field }}
